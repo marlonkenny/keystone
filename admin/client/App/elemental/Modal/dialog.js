@@ -123,7 +123,6 @@ const classes = {
 		zIndex: theme.modal.zIndex,
 	},
 	dialog: {
-		maxHeight: '90%',
 		overflow: 'scroll',
 		backgroundColor: 'white',
 		borderRadius: theme.borderRadius.default,
@@ -132,6 +131,9 @@ const classes = {
 		paddingRight: theme.modal.padding.dialog.horizontal,
 		paddingTop: theme.modal.padding.dialog.vertical,
 		position: 'relative',
+		[`@media (min-width: ${theme.breakpoint.tabletPortraitMax})`]: {
+			maxHeight: '90%',
+		},
 	},
 };
 
