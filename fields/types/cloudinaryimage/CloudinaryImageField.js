@@ -64,6 +64,11 @@ module.exports = Field.create({
 			});
 		}
 	},
+	shouldCollapse () {
+		// Overwrite the parent shouldCollapse to ensure
+		// this collapses when the value is an empty object
+		return this.props.collapse && !this.hasImage()
+	},
 
 	// ==============================
 	// HELPERS
